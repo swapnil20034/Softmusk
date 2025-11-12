@@ -1,0 +1,103 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    height:100vh;
+    width:auto;
+
+    background-image:url("https://cdn.mos.cms.futurecdn.net/rDJegQJaCyGaYysj2g5XWY.jpg");
+    background-position:center;
+    background-image:linear-gradient(red,black(rgba(0,0,0,0.7)))
+    background-size:cover;
+} 
+.button {
+    border: none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+
+    
+}  
+.navbar{
+    height:90px;
+    width:auto;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.logo{
+    height:80px;
+    width:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image:url(https://images.ctfassets.net/y2ske730sjqp/1aONibCke6niZhgPxuiilC/2c401b05a07288746ddf3bd3943fbc76/BrandAssets_Logos_01-Wordmark.jpg?w=940&q=50&fm=webp);
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+.text-content{
+  height:800px;
+  width:auto;
+  display:flex;
+    font-size:1.2rem;
+    size:auto;
+    text-color:red;
+    color:white;
+    text-align:center;
+    margin:20px 0;
+    text-align:flex;
+    text-justify:center;
+}
+.second-heading{
+    textcolor:white;
+    color:white;
+    text-align:center;
+    margin:20px 0;
+}
+.email{
+    text-align:center;
+    margin:20px 0;
+     border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    color:red;
+}
+.btn1{
+  height:40px;
+  width:100px;
+  backround-color:red;
+  color:red;
+  font-color:red;
+  font-weight:bold;
+  border:none;
+  border-curved:5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.btn2{
+    height:40px;
+    width:100px;
+    backround-color:red;
+    color:red;
+    font-color:white;
+    font-weight:bold;
+    border:none;
+    border-curved:5px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}

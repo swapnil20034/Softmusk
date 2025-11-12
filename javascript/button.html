@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="heading">Javascript DOM</h1>
+    <button id="btn">Click</button>
+
+    <script>
+      let btn = document.getElementById("btn");
+      let heading = document.querySelector(".heading");
+
+      btn.addEventListener("click", function () {
+        alert("Button was Clicked");
+        heading.textContent = "This is Modified text";
+        document.body.style.backgroundColor = "red";
+        document.body.img.src = "";
+      });
+
+      // to change the content of the tag
+      // .textContent
+      // .innerHTML
+
+      // to access the selectors from an HTML Document
+      // document.getElementById('btn')
+      // document.getElementsByClassName('heading')
+      // document.querySelector('.heading')
+      // document.querySelectorAll('.heading')
+      // document.getElementsByTagName('button')
+      
+    </script>
+  </body>
+</html>

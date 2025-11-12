@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cards{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+        .card{
+            height: 500px;
+            width: 300px;
+            margin: auto;
+            background-color: rgb(220, 174, 174);
+            color: white;
+
+        }
+        @media (max-width: 600px)
+         {
+            .cards{
+                display: flex;
+                align-items: center;
+                background-color: rgb(212, 207, 206);
+            }
+            .card {
+                background-color: rgb(220, 180, 116);
+            }
+        }   
+    </style>
+</head>
+<body>
+    <div class="cards">
+    <div class="card">
+        <p>media queried</p>
+    </div>
+    <div class="card">
+        <p>second card</p>
+    </div>
+    <div class="card">
+        <p>third card</p>
+    </div>
+    <div class="card">
+        <p>fourth card</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Run apl.js</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 20px; }
+      #output { white-space: pre-wrap; background:#111; color:#fff; padding:12px; border-radius:6px; }
+      .result { margin-top:12px; }
+      button { padding:10px 14px; font-size:16px; }
+    </style>
+  </head>
+  <body>
+    <h2>Run apl.js (fetch users)</h2>
+    <p>Click the button to fetch users from jsonplaceholder and render results below.</p>
+    <button id="btn">Fetch users</button>
+    <div class="result" id="result"></div>
+
+    <script>
+      // Mirror console.log to the result div for easier viewing
+      (function(){
+        const result = document.getElementById('result');
+        const origLog = console.log.bind(console);
+        console.log = function(...args){
+          origLog(...args);
+          try{
+            const text = args.map(a => (typeof a === 'object' ? JSON.stringify(a, null, 2) : String(a))).join(' ');
+            result.innerText += text + '\n\n';
+          }catch(e){
+            result.innerText += args.join(' ') + '\n\n';
+          }
+        };
+      })();
+    </script>
+
+    <script src="apl.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <img class="img" src="https://static.vecteezy.com/system/resources/thumbnails/023/238/324/small/caribbean-cruise-vacation-panoramic-skyline-of-saint-martin-island-from-pic-paradis-lookout-photo.jpg" alt="Insta Logo">
+    </div>
+    <h1 class="text">not friends</h1>
+
+    <button class="btn">Follow</button>
+    <script>
+        let img=document.querySelector('.img')
+        let text=document.querySelector('.text')
+        let btn=document.querySelector('.btn')
+        let check =0;
+
+
+        btn.addEventListener('click',function(){
+            if(check===0){
+                img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8aBHVqWt9rq1gUlDp2--pq_Rr-Wrp4dPxzw&s";
+                text.innerHTML="we are friends";
+                text.style.color="blue";
+                btn.innerHTML="following";
+                check=1;
+            }else{
+                img.src="https://www.valleedossau.com/medias/images/prestataires/ete-picdossau1-garderes-7715.jpg";
+                text.innerHTML="not friends";
+                text.style.color="red";
+                btn.innerHTML="unfollow";
+                check=0;
+            }
+        })
+    </script>
+</body>
+</html> 

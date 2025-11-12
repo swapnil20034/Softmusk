@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Run script.js</title>
+    <style>body{font-family:Segoe UI,Arial;background:#fff;color:#111;padding:20px}pre{background:#222;color:#fff;padding:12px;border-radius:6px;white-space:pre-wrap}</style>
+  </head>
+  <body>
+    <h2>Output of javascript/script.js</h2>
+    <pre id="output">Loading...
+</pre>
+
+    <script>
+      // Capture console.log and print to the <pre>
+      (function () {
+        const out = document.getElementById('output');
+        out.textContent = '';
+        const origLog = console.log.bind(console);
+        console.log = function (...args) {
+          try {
+            const text = args.map(a => {
+              try { return typeof a === 'object' ? JSON.stringify(a) : String(a); } catch(e) { return String(a); }
+            }).join(' ');
+            out.textContent += text + '\n';
+          } catch (e) {
+            out.textContent += String(args) + '\n';
+          }
+          origLog(...args);
+        };
+      })();
+
+      // Load the external script
+      const s = document.createElement('script');
+      s.src = 'javascript/script.js';
+      s.onload = () => console.log('--- script loaded ---');
+      s.onerror = () => document.getElementById('output').textContent = 'Failed to load javascript/script.js';
+      document.head.appendChild(s);
+    </script>
+  </body>
+</html>
